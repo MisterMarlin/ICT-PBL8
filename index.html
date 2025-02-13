@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Navbar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
+    <style>        
+        .card {
+            position: relative;
+            overflow: hidden;
+            color: white;
+            border: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .card-body {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 20px;
+        }
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .card-text {
+            font-size: 1rem;
+        }
+        .bg-img{
+        height: 500px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top;
+        padding-left: 200px;
+        padding-top: 150px;
+        color: white;
+    }
+    .bg-img1{
+        background-image: url(img/pros.jpeg);
+    }
+    .bg-img2{
+        background-image: url(img/PC.gif);
+    }
+    .bg-img3{
+        background-image: url(img/pros.jpeg);
+    }
+    .hero_C h1{
+        text-transform: uppercase;
+        color: yellow;
+    }
+    .box img{
+      width: 300px;
+      height: 150px;
+      float: left;
+      color: white;
+    }
+    .box img{
+			width: 20%;
+			float: left;
+		}
+		.box{
+			clear: left;
+			border: 2px solid white;
+		}
+    .timeline{
+            position: relative;
+            max-width: 40%;
+            list-style-type: none;
+            border-left: 3px solid rgb(11, 71, 146);
+            margin: 0 auto;
+        }
+        .timeline .timeline-item{
+            position: relative;
+        }
+        .timeline .timeline-item::before,
+        .timeline .timeline-item::after{
+            position: absolute;
+            display: block;
+
+        }
+        .timeline .timeline-item::before{
+            contain: attr(data-date);
+            left: -157;
+            top: 35px;
+        }
+        .timeline .timeline-item::after{
+            position: absolute;
+            width: 15px; height: 15px;
+            border-radius: 50%;
+            background-color: rgb(11, 71, 146);
+            content: "";
+            left: -41px; top: 42px;
+        }
+    
+    
+    </style>
+</head>
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black position-relative sticky-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-start show text-bg-dark " id="navbarNav">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasLabel">
+                 <img src="image/logo.png" alt="" width="80px" class="rounded-circle ms-5">
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+
+              <div class="offcanvas-body">
+                <ul class="navbar-nav ">
+                  <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="about us.html">About</a></li>
+                  <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="definition.html" id="exploreDropdown" role="button" data-bs-toggle="dropdown">Artificial Intelligence</a>
+                      <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
+                          <li><a class="dropdown-item" href="general AI.html">General AI</a></li>
+                          <li><a class="dropdown-item" href="AI and Machine Learning.html">AI and Machine Learning</a></li>
+                          <li><a class="dropdown-item" href="limited memory AI.html">limited memory AI</a></li>
+                          <li><a class="dropdown-item" href="Therory of Mind AI.html">Theory of Mind AI</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="pros.html">Pros and Cons of AI</a></li>
+              </ul>
+              
+              <a class="navbar-brand d-none d-md-block" href="index.html"><img src="image/logo.png" alt="" width="80px" class="rounded-circle"></a>
+              <button type="button" class="btn btn-custom " data-bs-toggle="modal" data-bs-target="#first">Log In</button>
+            </div>
+
+                
+              </div>
+            </div>
+        </nav> <!--End of Navigation Panel-->
+                <!--sign up Modal-->
+                <div class="modal fade" id="first" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+                    <div class="modal-dialog  modal-dialog-centered">
+                      <div class="modal-content">
+                
+                
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Log In To Your Account</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                
+                        <div class="modal-body">
+                          <form action="index.html">
+                            <div class="mb-3">
+                              <label for="email" class="form-label">Email address</label>
+                              <input type="email" class="form-control shadow-none" id="email" placeholder="Name@gmail.com">
+                            </div>
+                            <div class="mb-3">
+                              <label for="pass" class="form-label">Password</label>
+                              <input type="password" class="form-control shadow-none" id="pass">
+                            </div>
+                            <div class="form-check flex-row-reverse">
+                              <input type="checkbox" class="form-check-input shadow-none" id="check">
+                              <label class="form-check-label" for="check">Always Sign me in</label>
+                              <div class="d-flex float-end"><p>New Member?</p><a href="#" class="text-decoration-none"  data-bs-toggle="modal" data-bs-target="#second">Sign Up</a></div>
+                            </div>
+                          </form>
+                        </div>
+                
+                        <div class="modal-footer">
+                          <a href="index.html" class="btn btn-primary mx-auto" type="submit" style="width: 250px;">Log In</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+                
+                  <div class="modal fade" id="second" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+                    <div class="modal-dialog  modal-dialog-centered">
+                      <div class="modal-content">
+                
+                
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5">Sign Up</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                
+                        <div class="modal-body">
+                          <form>
+                            <div class="mb-3">
+                              <label for="email" class="form-label">Email address</label>
+                              <input type="email" class="form-control shadow-none" id="email" placeholder="Name@gmail.com">
+                            </div>
+                            <div class="mb-3">
+                              <label for="pass" class="form-label">Password</label>
+                              <input type="password" class="form-control shadow-none" id="pass">
+                            </div>
+                            <div class="mb-3">
+                              <label for="pass" class="form-label">Confirm your password again</label>
+                              <input type="password" class="form-control shadow-none" id="pass">
+                            </div>
+                            <div class="mb-3">
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-md-6 d-grid">
+                                    <input type="radio" class="btn-check" name="options-outlined" id="male" autocomplete="off" checked>
+                                    <label class="btn btn-outline-primary" for="male"><i class="bi bi-gender-male"></i></label>
+                                  </div>
+                                  <div class="col-md-6 d-grid">
+                                    <input type="radio" class="btn-check" name="options-outlined" id="female" autocomplete="off">
+                                    <label class="btn btn-outline-danger" for="female"><i class="bi bi-gender-female"></i></label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input shadow-none" id="check">
+                              <label class="form-check-label" for="check">I agree to the <a href="#" data-bs-toggle="modal" data-bs-target="#second-half">Terms and Policy</a></label>
+                            </div>
+                          </form>
+                        </div>
+                
+                        <div class="modal-footer">
+                          <button class="btn btn-primary mx-auto" type="button" style="width: 250px;" data-bs-toggle="modal" data-bs-target="#third">Sign Up</button>
+                          <a href=""></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <div class="modal fade" id="third" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+                    <div class="modal-dialog  modal-dialog-centered">
+                      <div class="modal-content">
+                
+                
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5">Sign Up Successful</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                
+                        <div class="modal-body">
+                            <img src="image/suc.png" alt="success" style="width: 100px; height: 100px;" class="d-block mx-auto">
+                            <p class="text-center">You have successfully signed up your account. You can now log in.</p>
+                        </div>
+                
+                        <div class="modal-footer">
+                          <button class="btn btn-primary mx-auto" type="button" style="width: 250px;" data-bs-toggle="modal" data-bs-target="#first">Go Back</button>
+                          <a href=""></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="modal fade" id="second-half" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+                    <div class="modal-dialog  modal-dialog-centered modal-dialog-scrollable">
+                      <div class="modal-content">
+                
+                
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5">Terms and Policy</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                
+                        <div class="modal-body">
+                            <p>The terms and policies of your website are designed to establish a clear and transparent understanding between you, the owner, and your users regarding the acceptable use, privacy, and operation of the platform. By accessing and using the website, users agree to comply with all the outlined terms, which may be updated periodically to reflect changes in the website's functionality, services, or applicable legal requirements. The website is committed to respecting user privacy and implements measures to protect personal data, ensuring that information such as names, email addresses, and other identifying details are collected only with user consent and are utilized solely for improving services, personalizing user experiences, and maintaining communication. Unauthorized activities such as hacking, spamming, or any form of misuse that undermines the integrity of the platform are strictly prohibited, and such actions may lead to immediate termination of access. Additionally, all content on the website, including text, images, videos, and other media, is protected under intellectual property laws and remains the exclusive property of the website unless explicitly stated otherwise. Users are prohibited from reproducing, distributing, or modifying the content without prior written permission. The website employs cookies to optimize user experience, track interactions, and gather data for analytical purposes, with users retaining the ability to manage cookie preferences through browser settings. External links may be included for informational or promotional purposes, but the website is not responsible for the practices, content, or policies of these third-party sites. It is important for users to read and understand the terms thoroughly, as continued use of the platform implies agreement with any changes made to these policies over time. Should users have any questions, concerns, or disputes regarding the terms, they are encouraged to reach out to the website’s support team for clarification or resolution. Security is a top priority, and while industry-standard encryption and safeguards are in place to protect user data, the website cannot guarantee absolute security against potential breaches. The website reserves the right to modify or discontinue any feature, service, or aspect of the platform at any time without prior notice, and it shall not be held liable for any loss or inconvenience caused by such changes. Users are encouraged to periodically review the terms and policies to stay informed about their rights and responsibilities while using the website, ensuring a safe and enjoyable experience for everyone involved.</p>
+                        </div>
+                
+                        <div class="modal-footer">
+                          <button class="btn btn-primary mx-auto" type="button" style="width: 250px;" data-bs-toggle="modal" data-bs-target="#second">Go Back</button>
+                          <a href=""></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+  <!--End of Header-->
+
+
+    <!--Carousel Design-->
+    <div class="container-fluid">
+      <div id="carousel_design1" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carousel_design1" data-bs-slide-to="0" class="active" ></button>
+            <button type="button" data-bs-target="#carousel_design1" data-bs-slide-to="1" ></button>
+            <button type="button" data-bs-target="#carousel_design1" data-bs-slide-to="2" ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="image/carousel 3.jpg" class="d-block w-100" height="500px" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h3>How can AI change the world?</h3>
+                <p>AI has the potential to boost economies, provide advancements in medicine, and help scientists tackle climate change.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="image/carousel 1.jpg" class="d-block w-100" height="500px" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h3>How is AI used in everyday life?</h3>
+                <p>AI is integrated into various lifestyle applications, from personal assistants like Siri and Alexa to smart home devices.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="image/aii.jpg" class="d-block w-100" height="500px" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h3>How does AI affect people's lives?</h3>
+                <p>AI has the potential to bring about numerous positive changes in society, including enhanced productivity, improved healthcare, and increased access to education.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carousel_design1" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carousel_design1" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+  </div> <!--End of Carousel-->
+  
+  <div class="container mt-5  bg-AI-info">
+    <div class="col-md-7 mx-auto">
+      <h1 class="text-white">Artificial Intelligence</h1>
+      <p class="text-white">Artificial Intelligence (AI) is a branch of computer science that focuses on creating intelligent machines capable of performing tasks that typically require human intelligence. These tasks include problem-solving, learning, reasoning, perception, language understanding, and decision-making. AI enables computers and systems to analyze data, recognize patterns, and make informed decisions with minimal human intervention.</p>
+      <a href="https://www.coursera.org/articles/what-is-artificial-intelligence" class="btn btn-primary mx-auto pd-3 mt-auto" type="button" style="width: 200px;">Explore</a>
+    </div>
+  </div>
+
+  
+  <div class="container mt-3 mb-3">
+    <div class="class">
+        <ul class="timeline">
+          <h1 class="text-white">Timeline of AI</h1>
+            <li class="timeline-item mb-3 " data-date="4:50 to 5:30">
+            <div class="card p-2 text-black">
+                <div class="card-header">1950s</div>
+                    <p></p>
+                    <p>The concept of AI emerged with Alan Turing's work, including the Turing Test, which measures a machine's ability to exhibit human-like intelligence.</p>
+                </div>
+            </li>
+
+            <li class="timeline-item mb-3" data-date="4:50 to 5:30">
+                <div class="card p-2 text-black">
+                    <div class="card-header" >1956s</div>
+                        <p></p>
+                        <p>The term "Artificial Intelligence" was coined at the Dartmouth Conference, marking the birth of AI as a field of study.</p>
+                    </div>
+                
+            </li>
+            <li class="timeline-item mb-3" data-date="4:50 to 5:30">
+                <div class="card p-2 text-black">
+                    <div class="card-header">1960s-1980s</div>
+                        
+                        <p> AI research focused on symbolic reasoning, expert systems, and early machine learning models.</p>
+                    </div>
+            </li>
+            <li class="timeline-item mb-3" data-date="4:50 to 5:30">
+                <div class="card p-2 text-black">
+                    <div class="card-header" >1990s-2000s </div>
+                        <p></p>
+                        <p>AI applications expanded into fields like game playing (Deep Blue defeating chess champion Garry Kasparov) and speech recognition. </p>
+                    </div>
+            </li>
+            <li class="timeline-item mb-3" data-date="4:50 to 5:30">
+                <div class="card p-2 text-black">
+                    <div class="card-header">2010s-Present.</div>
+                        <p></p>
+                        <p> The rise of deep learning, big data, and increased computing power led to significant advancements in AI, with applications in self-driving cars, facial recognition, AI-generated art, and more. </p>
+                    </div>
+            </li>
+            </div>
+        </ul>
+    </div>
+</div>
+
+    <div class="container mt-4 mb-4">
+      <div class="row row-cols-1 row-cols-md-4 g-4">
+
+          <a href="general AI.html" class="text-decoration-none">
+            <div class="col">
+            <div class="card h-100" style="background-color: black;">
+              <img class="card-img-top" src="image/genearl AI.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">General AI</h5>
+                    <p>Artificial general intelligence (AGI) refers to the hypothetical intelligence of a machine that possesses the ability to understand or learn any intellectual task that a human being can. It is a type of artificial intelligence (AI) that aims to mimic the cognitive abilities of the human brain.</p>
+                </div>
+            </div>
+        </div>
+      </a>
+
+      <a href="AI and Machine Learning.html" class="text-decoration-none">
+        <div class="col">
+        <div class="card h-100" style="background-color: black;">
+          <img class="card-img-top" src="image/machine learning.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">AI and Machine Learning</h5>
+                <p class="card-text">Machine learning is a subset of artificial intelligence that automatically enables a machine or system to learn and improve from experience. Instead of explicit programming, machine learning uses algorithms to analyze large amounts of data, learn from the insights, and then make informed decisions.</p>
+            </div>
+        </div>
+    </div>
+   </a>
+
+      <a href="limited memory AI.html" class="text-decoration-none">
+        <div class="col">
+        <div class="card h-100" style="background-color: black;">
+          <img class="card-img-top" src="image/limited memory AI.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Limited Memory AI</h5>
+                <p class="card-text">In AI, limited memory refers to systems that temporarily store data for making decisions. Unlike reactive machines, these systems have a short-lived or transient memory, used to improve their predictions or decisions based on recent data.</p>
+            </div>
+        </div>
+    </div>
+  </a>
+
+      <a href="Therory of Mind AI.html" class="text-decoration-none">
+            <div class="col">
+            <div class="card h-100" style="background-color: black;">
+              <img class="card-img-top" src="image/theory of mind AI.jpg" alt="Card image cap" height="220px">
+                <div class="card-body">
+                    <h5 class="card-title">Theory of Mind AI</h5>
+                    <p class="card-text">"Theory of mind AI" refers to the concept of developing artificial intelligence systems that can understand and model the mental states of other agents, like humans, by comprehending their thoughts, intentions, beliefs, and emotions, essentially allowing the AI to "read minds" and interact more naturally and effectively with people</p>
+                </div>
+            </div>
+        </div>
+      </a>
+
+  </div>
+</div>
+  
+
+<!--Start of Footer-->
+    <footer>
+      <div class="container-fluid text-center">
+          
+              <div class="row pt-3">
+                  <div class="footer-col col-md-4">
+                      <img src="image/logo.png" alt="img" width="80px" class="rounded-circle ms-5 ">
+                      <p class="text-white pt-3">Contact us:</p>
+                      <p class="text-white">+95 9781111957</p>
+                      <p class="text-white">+95 95114238</p>
+                  </div>
+
+                  <!--2nd Col-->
+                  <div class="footer-col col-md-4">
+                      <h4>Check Here</h4>
+                      <ul>
+                        <li><a href="index.html">Homepage</a></li>
+                        <li><a href="about us.html">About Us</a></li>
+                        <li><a href="pros.html">Pros and Cons of AI</a></li>
+                        <li><a href="reference.html">References</a></li>
+                    </ul>
+                  </div>
+
+                  <!--3rd Col-->
+                  <div class="footer-col col-md-4">
+                      <h4>Quick Link</h4>
+                      <ul>
+                        <li><a href="general AI.html">General AI</a></li>
+                        <li><a href="AI and Machine Learning.html">AI and Machine Learning</a></li>
+                        <li><a href="limited memory AI.html">Limited Memory AI</a></li>
+                        <li><a href="Therory of Mind AI.html">Theory of Mind AI</a></li>
+                    </ul>
+                  </div>
+              </div>
+
+              <hr class="footer-hr"/>
+              <div class="row">
+                  <ul class="social-icons">
+                      <a href="https://www.youtube.com/@Maaaarth/videos" class="fa fa-youtube"></a>
+                      <a href="https://www.coursera.org/articles/what-is-artificial-intelligence" class="fa fa-google"></a>
+                      <a href="https://www.pinterest.com/search/pins/?rs=ac&len=2&q=artificial%20inteligent&eq=Artificial%20inte&etslf=5939" class="fa fa-pinterest"></a>
+                  </ul>
+                  <div class="col" class="symbol">
+                      <p class="text-white">© Copyright 2025 www.SnowFlake.com. All rights reserved. Developed by SnowFlake.</p>
+                  </div>
+              </div>  
+      </div>
+  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

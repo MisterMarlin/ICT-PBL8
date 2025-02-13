@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <style>
+        body{
+            background-color: black;
+        }
+        .timeline{
+            position: relative;
+            max-width: 40%;
+            list-style-type: none;
+            border-left: 3px solid rgb(11, 71, 146);
+            margin: 0 auto;
+        }
+        .timeline .timeline-item{
+            position: relative;
+        }
+        .timeline .timeline-item::before,
+        .timeline .timeline-item::after{
+            position: absolute;
+            display: block;
+
+        }
+        .timeline .timeline-item::before{
+            contain: attr(data-date);
+            left: -157;
+            top: 35px;
+        }
+        .timeline .timeline-item::after{
+            position: absolute;
+            width: 15px; height: 15px;
+            border-radius: 50%;
+            background-color: rgb(11, 71, 146);
+            content: "";
+            left: -41px; top: 42px;
+        }
+    </style>
+    <div class="container">
+        <div class="class">
+            <ul class="timeline">
+                <li class="timeline-item mb-3 " data-date="4:50 to 5:30">
+                <div class="card p-2">
+                    <div class="card-header">1950s</div>
+                        <p></p>
+                        <p>The concept of AI emerged with Alan Turing's work, including the Turing Test, which measures a machine's ability to exhibit human-like intelligence.</p>
+                    </div>
+                </li>
+
+                <li class="timeline-item mb-3" data-date="4:50 to 5:30">
+                    <div class="card p-2">
+                        <div class="card-header" >1956s</div>
+                            <p></p>
+                            <p>The term "Artificial Intelligence" was coined at the Dartmouth Conference, marking the birth of AI as a field of study.</p>
+                        </div>
+                    
+                </li>
+                <li class="timeline-item mb-3" data-date="4:50 to 5:30">
+                    <div class="card p-2">
+                        <div class="card-header">1960s-1980s</div>
+                            
+                            <p> AI research focused on symbolic reasoning, expert systems, and early machine learning models.</p>
+                        </div>
+                </li>
+                <li class="timeline-item mb-3" data-date="4:50 to 5:30">
+                    <div class="card p-2">
+                        <div class="card-header" >1990s-2000s </div>
+                            <p></p>
+                            <p>AI applications expanded into fields like game playing (Deep Blue defeating chess champion Garry Kasparov) and speech recognition. </p>
+                        </div>
+                </li>
+                <li class="timeline-item mb-3" data-date="4:50 to 5:30">
+                    <div class="card p-2">
+                        <div class="card-header">2010s-Present.</div>
+                            <p></p>
+                            <p> The rise of deep learning, big data, and increased computing power led to significant advancements in AI, with applications in self-driving cars, facial recognition, AI-generated art, and more. </p>
+                        </div>
+                </li>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

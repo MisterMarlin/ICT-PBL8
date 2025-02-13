@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Theory of Mind AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
+  </head>
+  <body class="bg-dark text-white">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black position-relative sticky-top">
+      <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="offcanvas offcanvas-start show text-bg-dark " id="navbarNav">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasLabel">
+               <img src="image/logo.png" alt="" width="80px" class="rounded-circle ms-5 ">
+              </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body">
+              <ul class="navbar-nav ">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about us.html">About</a></li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="definition.html" id="exploreDropdown" role="button" data-bs-toggle="dropdown">Artificial Intelligence</a>
+                    <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
+                        <li><a class="dropdown-item" href="general AI.html">General AI</a></li>
+                        <li><a class="dropdown-item" href="AI and Machine Learning.html">AI and Machine Learning</a></li>
+                        <li><a class="dropdown-item" href="limited memory AI.html">limited memory AI</a></li>
+                        <li><a class="dropdown-item" href="Therory of Mind AI.html">Theory of Mind AI</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="pros.html">Pros and Cons of AI</a></li>
+            </ul>
+            
+            <a class="navbar-brand d-none d-md-block" href="index.html"><img src="image/logo.png" alt="" width="80px" class="rounded-circle"></a>
+            <button type="button" class="btn btn-custom " data-bs-toggle="modal" data-bs-target="#first">Log In</button>
+          </div>
+
+              
+            </div>
+          </div>
+      </nav> <!--End of Navigation Panel-->
+              <!--sign up Modal-->
+              <div class="modal fade text-black" id="first" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+                  <div class="modal-dialog  modal-dialog-centered">
+                    <div class="modal-content text-black">
+              
+              
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Log In To Your Account</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                      </div>
+              
+                      <div class="modal-body">
+                        <form action="index.html">
+                          <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control shadow-none" id="email" placeholder="Name@gmail.com">
+                          </div>
+                          <div class="mb-3">
+                            <label for="pass" class="form-label">Password</label>
+                            <input type="password" class="form-control shadow-none" id="pass">
+                          </div>
+                          <div class="form-check flex-row-reverse">
+                            <input type="checkbox" class="form-check-input shadow-none" id="check">
+                            <label class="form-check-label" for="check">Always Sign me in</label>
+                            <div class="d-flex float-end"><p>New Member?</p><a href="#" class="text-decoration-none"  data-bs-toggle="modal" data-bs-target="#second">Sign Up</a></div>
+                          </div>
+                        </form>
+                      </div>
+              
+                      <div class="modal-footer">
+                        <a href="index.html" class="btn btn-primary mx-auto" type="submit" style="width: 250px;">Log In</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+              
+                <div class="modal fade text-black" id="second" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+                  <div class="modal-dialog  modal-dialog-centered">
+                    <div class="modal-content">
+              
+              
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5">Sign Up</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                      </div>
+              
+                      <div class="modal-body">
+                        <form>
+                          <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control shadow-none" id="email" placeholder="Name@gmail.com">
+                          </div>
+                          <div class="mb-3">
+                            <label for="pass" class="form-label">Password</label>
+                            <input type="password" class="form-control shadow-none" id="pass">
+                          </div>
+                          <div class="mb-3">
+                            <label for="pass" class="form-label">Confirm your password again</label>
+                            <input type="password" class="form-control shadow-none" id="pass">
+                          </div>
+                          <div class="mb-3">
+                            <div class="container">
+                              <div class="row">
+                                <div class="col-md-6 d-grid">
+                                  <input type="radio" class="btn-check" name="options-outlined" id="male" autocomplete="off" checked>
+                                  <label class="btn btn-outline-primary" for="male"><i class="bi bi-gender-male"></i></label>
+                                </div>
+                                <div class="col-md-6 d-grid">
+                                  <input type="radio" class="btn-check" name="options-outlined" id="female" autocomplete="off">
+                                  <label class="btn btn-outline-danger" for="female"><i class="bi bi-gender-female"></i></label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input shadow-none" id="check">
+                            <label class="form-check-label" for="check">I agree to the <a href="#" data-bs-toggle="modal" data-bs-target="#second-half">Terms and Policy</a></label>
+                          </div>
+                        </form>
+                      </div>
+              
+                      <div class="modal-footer">
+                        <button class="btn btn-primary mx-auto" type="button" style="width: 250px;" data-bs-toggle="modal" data-bs-target="#third">Sign Up</button>
+                        <a href=""></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="modal fade text-black" id="third" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+                  <div class="modal-dialog  modal-dialog-centered">
+                    <div class="modal-content">
+              
+              
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5">Sign Up Successful</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                      </div>
+              
+                      <div class="modal-body">
+                          <img src="image/suc.png" alt="success" style="width: 100px; height: 100px;" class="d-block mx-auto">
+                          <p class="text-center">You have successfully signed up your account. You can now log in.</p>
+                      </div>
+              
+                      <div class="modal-footer">
+                        <button class="btn btn-primary mx-auto" type="button" style="width: 250px;" data-bs-toggle="modal" data-bs-target="#first">Go Back</button>
+                        <a href=""></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="modal fade text-black" id="second-half" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+                  <div class="modal-dialog  modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+              
+              
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5">Terms and Policy</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                      </div>
+              
+                      <div class="modal-body">
+                          <p>The terms and policies of your website are designed to establish a clear and transparent understanding between you, the owner, and your users regarding the acceptable use, privacy, and operation of the platform. By accessing and using the website, users agree to comply with all the outlined terms, which may be updated periodically to reflect changes in the website's functionality, services, or applicable legal requirements. The website is committed to respecting user privacy and implements measures to protect personal data, ensuring that information such as names, email addresses, and other identifying details are collected only with user consent and are utilized solely for improving services, personalizing user experiences, and maintaining communication. Unauthorized activities such as hacking, spamming, or any form of misuse that undermines the integrity of the platform are strictly prohibited, and such actions may lead to immediate termination of access. Additionally, all content on the website, including text, images, videos, and other media, is protected under intellectual property laws and remains the exclusive property of the website unless explicitly stated otherwise. Users are prohibited from reproducing, distributing, or modifying the content without prior written permission. The website employs cookies to optimize user experience, track interactions, and gather data for analytical purposes, with users retaining the ability to manage cookie preferences through browser settings. External links may be included for informational or promotional purposes, but the website is not responsible for the practices, content, or policies of these third-party sites. It is important for users to read and understand the terms thoroughly, as continued use of the platform implies agreement with any changes made to these policies over time. Should users have any questions, concerns, or disputes regarding the terms, they are encouraged to reach out to the website’s support team for clarification or resolution. Security is a top priority, and while industry-standard encryption and safeguards are in place to protect user data, the website cannot guarantee absolute security against potential breaches. The website reserves the right to modify or discontinue any feature, service, or aspect of the platform at any time without prior notice, and it shall not be held liable for any loss or inconvenience caused by such changes. Users are encouraged to periodically review the terms and policies to stay informed about their rights and responsibilities while using the website, ensuring a safe and enjoyable experience for everyone involved.</p>
+                      </div>
+              
+                      <div class="modal-footer">
+                        <button class="btn btn-primary mx-auto" type="button" style="width: 250px;" data-bs-toggle="modal" data-bs-target="#second">Go Back</button>
+                        <a href=""></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    <div class="container mt-5">
+      <div class="row">
+
+        <div class="col-md-9 "><!--Content in view point-->
+          <div class="ms-5" data-bs-spy="scroll" data-bs-target="#nav-scroll" data-bs-smooth-scroll="true">
+
+          <h1 id="item-1" class="text-white">Theory of Mind AI: Bringing Human Cognition to Machines</h1>
+          <img src="https://www.neilsahota.com/wp-content/uploads/2024/08/Theory-of-Mind-AI.jpg" alt="" class="w-100">
+          <p>Artificial intelligence (AI) has grabbed attention with some pretty amazing achievements, like mastering complex games such as chess and driving big advances in <a href="https://www.neilsahota.com/speech-recognition-applications-features-future/">speech recognition</a> and autonomous driving. The field is always evolving, with scientists and researchers continuously pushing and trying to expand AI’s limits.</p>
+          <p>However, there is still one significant portion of human thinking that AI cannot yet comprehend: the capability to recognize other people’s thoughts and feelings, also called a “Theory of Mind.”</p>
+          <p>In this article, we’ll define the Theory of Mind AI, how it works, and why it matters.</p>
+
+                <h2 id="item-2" class="mt-5">What is the Theory of Mind AI?</h2><hr>   
+                <p>The Theory of Mind AI is about giving machines the ability to understand and mimic human mental states – things like beliefs, desires, intentions, and emotions. It proposes that machines can predict human thoughts by closing the current gap between traditional AI technology and genuine comprehension. </p>
+                <p>This idea comes from psychology and cognitive science, where theories about minds are crucial for understanding how people interact socially. If AI can tap into this knowledge, it could improve its interactions with humans and other <a href="https://www.neilsahota.com/ai-agents-the-rise-of-intelligent-agents-in-ai-technology/">AI agents</a>, making it better at interpreting situations, recognizing needs, and predicting reactions.</p>
+                <p>Take <a href="https://www.neilsahota.com/ai-in-self-driving-cars-shifting-gears-to-autonomy/">self-driving cars</a> as an example: to drive safely, they must know what other drivers or pedestrians may do to help them anticipate actions and avoid accidents. Another instance could be a robotic aide who realizes when one is tired without any words being spoken. Also, think about virtual assistants that adapt their explanations once they detect confusion in users.</p>
+                <p>In AI research, hitting the mark with the Theory of Mind could lead to more intelligent, empathetic, and socially aware machines. This could make a big difference in areas like customer service, healthcare, and <a href="https://www.neilsahota.com/ai-in-collaborative-robots-from-automation-to-collaboration/">collaborative robotics</a>. </p>
+                <iframe class="w-100" height="400px" src="https://www.youtube.com/embed/8en74rJQf6Y?autoplay=1&mute=1">
+                </iframe>                
+                  
+
+                <h2 id="item-3" class="mt-5">How Theory of Mind AI Works?</h2><hr>
+                <p>Theory of Mind AI begins by observing how people behave and communicate. It pays attention to the nuances of interactions and gathers data on various behaviors and contexts. As it collects this information, the AI starts recognizing patterns in people’s thoughts and feelings.</p>
+                <p>With these patterns in mind, the AI attempts to infer what someone might think or feel in a given situation. If its guesses aren’t quite correct, the AI learns from these inaccuracies and consequently adjusts its approach.</p>
+                <p>For example, if you’re chatting with an AI assistant and notice you’re giving brief responses, it might understand that you’re busy. The AI could then assume you might not have time for a detailed conversation and offer concise, direct answers instead.</p>                
+                
+
+                <h2 id="item-4" class="mt-5">Advancements in AI with Theory of Mind</h2> <hr>
+                <p>Theory of Mind AI is an exciting, multidisciplinary effort that combines psychology, neuroscience, computer science, and machine learning. However, the field is still young, and researchers are mainly concerned with how to recognize human emotions and expressions and convert them into models that computers can understand. </p>
+                <p>Emotion recognition technology has made great progress, but it remains largely theoretical whether we will ever achieve a fully-fledged Theory of Mind AI capable of understanding others’ feelings.</p>
+                <p>That being said, there have been some breakthroughs in giving artificial systems theory-of-mind abilities. Here are a few Theory of Mind AI examples:</p>
+                <ul>
+                  <li><b>Emotion Recognition:</b> Modern AI systems can now recognize human emotions through facial expressions, vocal tones, or sentiment analysis of text, among other things; this is considered one step closer to enabling machines to understand states of mind.</li>
+                  <li><b>Predictive Modelling:</b> With historical data sets at their disposal, predictive algorithms (often based on machine learning) can anticipate what any given person might do next best; for example, recommender systems that suggest products/movies/music, etc, based on past user choices.</li>
+                  <li><b>Conversational AI:</b> Conversational agents such as chatbots or virtual assistants have become better at understanding users’ contexts/intentions/emotional states thanks to more sophisticated dialogue systems being used behind them. This makes interactions feel more natural because they seem empathetic.</li>
+                  <li><b>Simulation and Cognitive Modelling:</b> By simulating thinking/anticipatory processes similar to humans, AI models can understand and predict behavior under different circumstances.</li>
+                  <li><b>Multi-Agent Systems:</b> In environments where many participants may be both human and non-human agents (e.g., within autonomous cars), it becomes necessary for an artificially intelligent system to be able to anticipate actions and intentions, even those involving other AIs.</li>
+                </ul>
+                
+                <h2 id="item-5" class="mt-5">Theory of Mind AI Applications</h2> <hr>
+                <p>The Theory of Mind AI is a work in progress, with its real-world applications largely in the research and experimental phase. Concrete applications and tasks for these systems are still being developed and not yet widely documented. Nevertheless, it is changing the game across various fields, bringing new possibilities for better human-machine interactions. </p>
+                <p>Here are some key applications illustrating their practical uses:</p>
+                <ul>
+                  <li>Social Robotics</li>
+                  <li>Healthcare</li>
+                  <li>Virtual Assistants</li>
+                  <li>Educational Technology</li>
+                  <li>Customer Service</li>
+                  <li>Video Games</li>
+                </ul>
+
+                <h2 id="item-6" class="mt-5">Theory of Mind AI vs. Traditional AI</h2> <hr>
+                <p> To fully appreciate the Theory of Mind AI, it’s important to understand how it differs from the AI systems we know today. Traditional AI relies on predefined rules and patterns, operating without any real understanding of human thoughts and emotions. </p>
+                <p>In contrast, we can speculate that the Theory of Mind AI – though still in the early stages of development – aims to go beyond this limitation by developing an enhanced ability to understand and interact with the entities it engages with.</p>
+                <p>Theory of Mind AI will need significant advancements in existing AI technologies to genuinely grasp human intelligence. For instance, although it might utilize <a href="https://www.neilsahota.com/neural-networks-a-solution-for-complex-problems-in-science-and-engineering/">neural networks</a>, these networks will fundamentally differ from those employed in current limited memory AI systems, which use historical data to make decisions and predictions but do not retain this data for long-term learning.</p>
+                <img src="https://www.neilsahota.com/wp-content/uploads/2024/08/Neural-network-1024x665.jpg" alt="" class="w-100">
+                <p>Source: Shutterstock/Toey Andante</p>
+                <p>To achieve this, the AI must recognize that humans possess a mind that can change based on various factors. This understanding enables the AI to differentiate between people’s emotions, beliefs, and needs.</p>
+                
+                <a href="#item-1" class="btn btn-primary mx-auto pd-3 mt-auto mb-5" type="button" style="width: 200px;"><i class="bi bi-arrow-bar-up text-white"></i> Go Back </a>  
+          </div>
+        </div>   
+        
+        <div class="col-md-3"> <!--Scroll spy nav bar-->
+          <nav class="" id="nav-scroll">
+            <ul class="nav nav-pills flex-column">
+              <li class="nav-item"><a href="#item-1" class="nav-link">Theory of Mind AI</a></li>
+              <li class="nav-item"><a href="#item-2" class="nav-link">What is the Theory of Mind AI?</a></li>
+              <li class="nav-item"><a href="#item-3" class="nav-link">How Theory of Mind AI Works?</a></li>
+              <li class="nav-item"><a href="#item-4" class="nav-link">Advancements in AI with Theory of Mind</a></li>
+              <li class="nav-item"><a href="#item-5" class="nav-link">Theory of Mind AI Applications</a></li>
+              <li class="nav-item"><a href="#item-5" class="nav-link">Theory of Mind AI vs. Traditional AI</a></li>
+            </ul>
+          </nav>
+        </div>
+
+      </div>
+    </div>
+
+    <footer>
+      <div class="container-fluid text-center">
+          
+              <div class="row pt-3">
+                  <div class="footer-col col-md-4">
+                      <img src="image/logo.png" alt="img" width="80px" class="rounded-circle ms-5 ">
+                      <p class="text-white pt-3">Contact us:</p>
+                      <p class="text-white">+95 9781111957</p>
+                      <p class="text-white">+95 95114238</p>
+                  </div>
+
+                  <!--2nd Col-->
+                  <div class="footer-col col-md-4">
+                      <h4>Check Here</h4>
+                      <ul>
+                        <li><a href="index.html">Homepage</a></li>
+                        <li><a href="about us.html">About Us</a></li>
+                        <li><a href="pros.html">Pros and Cons of AI</a></li>
+                        <li><a href="reference.html">References</a></li>
+                    </ul>
+                  </div>
+
+                  <!--3rd Col-->
+                  <div class="footer-col col-md-4">
+                      <h4>Quick Link</h4>
+                      <ul>
+                        <li><a href="general AI.html">General AI</a></li>
+                        <li><a href="AI and Machine Learning.html">AI and Machine Learning</a></li>
+                        <li><a href="limited memory AI.html">Limited Memory AI</a></li>
+                        <li><a href="Therory of Mind AI.html">Theory of Mind AI</a></li>
+                    </ul>
+                  </div>
+              </div>
+
+              <hr class="footer-hr"/>
+              <div class="row">
+                  <ul class="social-icons">
+                      <a href="https://www.youtube.com/@Maaaarth/videos" class="fa fa-youtube"></a>
+                      <a href="https://www.coursera.org/articles/what-is-artificial-intelligence" class="fa fa-google"></a>
+                      <a href="https://www.pinterest.com/search/pins/?rs=ac&len=2&q=artificial%20inteligent&eq=Artificial%20inte&etslf=5939" class="fa fa-pinterest"></a>
+                  </ul>
+                  <div class="col" class="symbol">
+                      <p class="text-white">© Copyright 2025 www.SnowFlake.com. All rights reserved. Developed by EDUSN.</p>
+                  </div>
+              </div>  
+      </div>
+  </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI: Pros & Cons</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
+</head>
+<style>
+    .navbar {
+            background-color: black !important;
+            width: 100%;
+        }
+        .navbar-nav {
+            width: 25%;
+            display: flex;
+            justify-content: space-around;
+        }
+        .nav-item {
+            flex-grow: 1;
+            text-align: center;
+            transition: background-color 0.3s ease-in-out;
+            padding: 10px 0;
+        }
+        .nav-item:hover {
+            background-color: #007bff;
+        }
+        .nav-link {
+            transition: color 0.3s ease-in-out;
+            color: white !important;
+        }
+        .nav-link:hover {
+            color: white !important;
+        }
+        .btn-custom {
+            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+            background-color: white;
+            color: black;
+        }
+        .btn-custom:hover {
+            background-color: #007bff;
+            transform: scale(1.1);
+            color: white;
+        }
+        .navbar-brand {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white !important;
+        }
+        .dropdown-menu {
+            background-color: black;
+        }
+        .dropdown-item {
+            color: white;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .dropdown-item:hover {
+            background-color: #007bff;
+            color: white;
+        }
+</style>
+
+<body class="bg-dark">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black position-relative sticky-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+  
+            <div class="offcanvas offcanvas-start show text-bg-dark " id="navbarNav">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasLabel">
+                 <img src="image/logo.png" alt="" width="80px" class="rounded-circle ms-5 ">
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+  
+              <div class="offcanvas-body">
+                <ul class="navbar-nav ">
+                  <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="about us.html">About</a></li>
+                  <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="definition.html" id="exploreDropdown" role="button" data-bs-toggle="dropdown">Artificial Intelligence</a>
+                      <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
+                          <li><a class="dropdown-item" href="general AI.html">General AI</a></li>
+                          <li><a class="dropdown-item" href="AI and Machine Learning.html">AI and Machine Learning</a></li>
+                          <li><a class="dropdown-item" href="limited memory AI.html">limited memory AI</a></li>
+                          <li><a class="dropdown-item" href="Therory of Mind AI.html">Theory of Mind AI</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="pros.html">Pros and Cons of AI</a></li>
+              </ul>
+              
+              <a class="navbar-brand d-none d-md-block" href="index.html"><img src="image/logo.png" alt="" width="80px" class="rounded-circle"></a>
+              <button type="button" class="btn btn-custom " data-bs-toggle="modal" data-bs-target="#first">Log In</button>
+            </div>
+  
+                
+              </div>
+            </div>
+        </nav> <!--End of Navigation Panel-->
+                <!--sign up Modal-->
+                <div class="modal fade text-black" id="first" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+                    <div class="modal-dialog  modal-dialog-centered">
+                      <div class="modal-content text-black">
+                
+                
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Log In To Your Account</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                
+                        <div class="modal-body">
+                          <form action="index.html">
+                            <div class="mb-3">
+                              <label for="email" class="form-label">Email address</label>
+                              <input type="email" class="form-control shadow-none" id="email" placeholder="Name@gmail.com">
+                            </div>
+                            <div class="mb-3">
+                              <label for="pass" class="form-label">Password</label>
+                              <input type="password" class="form-control shadow-none" id="pass">
+                            </div>
+                            <div class="form-check flex-row-reverse">
+                              <input type="checkbox" class="form-check-input shadow-none" id="check">
+                              <label class="form-check-label" for="check">Always Sign me in</label>
+                              <div class="d-flex float-end"><p>New Member?</p><a href="#" class="text-decoration-none"  data-bs-toggle="modal" data-bs-target="#second">Sign Up</a></div>
+                            </div>
+                          </form>
+                        </div>
+                
+                        <div class="modal-footer">
+                          <a href="index.html" class="btn btn-primary mx-auto" type="submit" style="width: 250px;">Log In</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+                
+                  <div class="modal fade text-black" id="second" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+                    <div class="modal-dialog  modal-dialog-centered">
+                      <div class="modal-content">
+                
+                
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5">Sign Up</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                
+                        <div class="modal-body">
+                          <form>
+                            <div class="mb-3">
+                              <label for="email" class="form-label">Email address</label>
+                              <input type="email" class="form-control shadow-none" id="email" placeholder="Name@gmail.com">
+                            </div>
+                            <div class="mb-3">
+                              <label for="pass" class="form-label">Password</label>
+                              <input type="password" class="form-control shadow-none" id="pass">
+                            </div>
+                            <div class="mb-3">
+                              <label for="pass" class="form-label">Confirm your password again</label>
+                              <input type="password" class="form-control shadow-none" id="pass">
+                            </div>
+                            <div class="mb-3">
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-md-6 d-grid">
+                                    <input type="radio" class="btn-check" name="options-outlined" id="male" autocomplete="off" checked>
+                                    <label class="btn btn-outline-primary" for="male"><i class="bi bi-gender-male"></i></label>
+                                  </div>
+                                  <div class="col-md-6 d-grid">
+                                    <input type="radio" class="btn-check" name="options-outlined" id="female" autocomplete="off">
+                                    <label class="btn btn-outline-danger" for="female"><i class="bi bi-gender-female"></i></label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input shadow-none" id="check">
+                              <label class="form-check-label" for="check">I agree to the <a href="#" data-bs-toggle="modal" data-bs-target="#second-half">Terms and Policy</a></label>
+                            </div>
+                          </form>
+                        </div>
+                
+                        <div class="modal-footer">
+                          <button class="btn btn-primary mx-auto" type="button" style="width: 250px;" data-bs-toggle="modal" data-bs-target="#third">Sign Up</button>
+                          <a href=""></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <div class="modal fade text-black" id="third" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+                    <div class="modal-dialog  modal-dialog-centered">
+                      <div class="modal-content">
+                
+                
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5">Sign Up Successful</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                
+                        <div class="modal-body">
+                            <img src="image/suc.png" alt="success" style="width: 100px; height: 100px;" class="d-block mx-auto">
+                            <p class="text-center">You have successfully signed up your account. You can now log in.</p>
+                        </div>
+                
+                        <div class="modal-footer">
+                          <button class="btn btn-primary mx-auto" type="button" style="width: 250px;" data-bs-toggle="modal" data-bs-target="#first">Go Back</button>
+                          <a href=""></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="modal fade text-black" id="second-half" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+                    <div class="modal-dialog  modal-dialog-centered modal-dialog-scrollable">
+                      <div class="modal-content">
+                
+                
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5">Terms and Policy</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                
+                        <div class="modal-body">
+                            <p>The terms and policies of your website are designed to establish a clear and transparent understanding between you, the owner, and your users regarding the acceptable use, privacy, and operation of the platform. By accessing and using the website, users agree to comply with all the outlined terms, which may be updated periodically to reflect changes in the website's functionality, services, or applicable legal requirements. The website is committed to respecting user privacy and implements measures to protect personal data, ensuring that information such as names, email addresses, and other identifying details are collected only with user consent and are utilized solely for improving services, personalizing user experiences, and maintaining communication. Unauthorized activities such as hacking, spamming, or any form of misuse that undermines the integrity of the platform are strictly prohibited, and such actions may lead to immediate termination of access. Additionally, all content on the website, including text, images, videos, and other media, is protected under intellectual property laws and remains the exclusive property of the website unless explicitly stated otherwise. Users are prohibited from reproducing, distributing, or modifying the content without prior written permission. The website employs cookies to optimize user experience, track interactions, and gather data for analytical purposes, with users retaining the ability to manage cookie preferences through browser settings. External links may be included for informational or promotional purposes, but the website is not responsible for the practices, content, or policies of these third-party sites. It is important for users to read and understand the terms thoroughly, as continued use of the platform implies agreement with any changes made to these policies over time. Should users have any questions, concerns, or disputes regarding the terms, they are encouraged to reach out to the website’s support team for clarification or resolution. Security is a top priority, and while industry-standard encryption and safeguards are in place to protect user data, the website cannot guarantee absolute security against potential breaches. The website reserves the right to modify or discontinue any feature, service, or aspect of the platform at any time without prior notice, and it shall not be held liable for any loss or inconvenience caused by such changes. Users are encouraged to periodically review the terms and policies to stay informed about their rights and responsibilities while using the website, ensuring a safe and enjoyable experience for everyone involved.</p>
+                        </div>
+                
+                        <div class="modal-footer">
+                          <button class="btn btn-primary mx-auto" type="button" style="width: 250px;" data-bs-toggle="modal" data-bs-target="#second">Go Back</button>
+                          <a href=""></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+    <div class="container mt-5">
+        <h1 class="text-center">Artificial Intelligence: Pros & Cons</h1>
+        
+        <div id="pros" class="mt-4 pros">
+            <h2 class="text-success">Pros of AI</h2>
+            <div class="accordion" id="prosAccordion">
+                <div class="accordion-item shadow-none">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            1. AI automates repetitive tasks
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#prosAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>AI excels at automating repetitive, data-driven, and mundane tasks.</li>
+                                <li>Today, AI does everything from responding to emails to performing complex manufacturing tasks.</li>
+                                <li>This frees up vast amounts of human labor to use on other activities, both at work and in life.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            2. AI reduces human error.  
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#prosAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>In business, humans aren't very good at consistently and accurately making decisions based on data.</li>
+                                <li>The same limitations apply to more physical tasks.</li>
+                                <li>AI reduces human error in many different areas of business and life.</li>
+                                <li>AI follows consistent logic and has no feelings that get in the way of analysis.</li>
+                                <li>This is why you increasingly see AI being used for tasks that need to be error-free, like precision manufacturing or driving assistance.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            3. AI does tasks that are too dangerous for us.
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#prosAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>AI software running in robots can do tasks that humans find dangerous.</li>
+                                <li>AI-powered robots can assist or take over perilous manufacturing, surveillance, and maintenance work.</li>
+                                <li>Human workers don't have to risk life and limb thanks to AI-powered robots.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                            4. AI helps us make better decisions.
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#prosAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>Artificial intelligence has the ability to recognize patterns in big data, then use those patterns to make predictions.</li>
+                                <li>Google Maps uses AI to predict which routes are optimal, so you can choose the one that gets you to your destination fastest.</li>
+                                <li>Amazon uses AI to predict which product you might like to buy next, which helps you make better, more enjoyable purchasing decisions.</li>
+                                <li>In business, AI can do everything from predicting which equipment in a plant needs maintenance to determining which of your leads are ready to buy.</li>
+                                <li>eBay used AI to predict which email subject lines customers would open, resulting in better predictions than those made by human copywriters and raising average open rates by 15%.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                            5. AI solves problems in ways that we can't.
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#prosAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>AI detects patterns in numbers, words, and images better than humans, making life easier in many ways.</li>
+                                <li>AI pattern detection even makes it possible to have self-driving cars that identify objects and obstacles in real-time.</li>
+                                <li>AI finishes your sentences in Gmail because it detects patterns in human writing and knows what comes next.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+                            6. AI makes us richer.
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#prosAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>AI unlocks benefits that traditional software doesn't provide.</li>
+                                <li>Because AI can do things that traditional software can't and improve on its own.</li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven">
+                            7. AI makes us more productive.
+                        </button>
+                    </h2>
+                    <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#prosAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <h5>That's because AI can:</h5>
+                                <li>Accelerate revenue growth.</li>
+                                <li>Create personalized consumer experiences at scale.</li>
+                                <li>Drive costs down.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Con of AI-->
+        <div id="cons" class="mt-4">
+            <h2 class="text-danger">Cons of AI</h2>
+            <div class="accordion" id="consAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight">
+                            1. AI needs lots of data.
+                        </button>
+                    </h2>
+                    <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#consAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>AI is only as good as the amount and quality of data it has.</li>
+                                <li>If the latest AI app on your phone doesn't have enough data, it will produce bad results.</li>
+                                <li>The same is true in business. Many companies need a minimum amount of data to get started using custom AI models or some AI tools.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine">
+                            2. AI can make bad decisions.
+                        </button>
+                    </h2>
+                    <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#consAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>When AI goes wrong, it can go really wrong.</li>
+                                <li>AI is also not going to become self-aware and take over the world.</li>
+                                <li>AI systems are deployed at scale across millions of devices.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10">
+                           3. AI doesn't always explain its decision.
+                        </button>
+                    </h2>
+                    <div id="collapse10" class="accordion-collapse collapse" data-bs-parent="#consAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>Some AI systems are what we call "black box" systems.</li>
+                                <li>This isn't a dealbreaker when the system works well.</li>
+                                <li>If you are getting good value out of an AI tool, you typically don't care how it works.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11">
+                            4. AI can be biased.
+                        </button>
+                    </h2>
+                    <div id="collapse11" class="accordion-collapse collapse" data-bs-parent="#consAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>AI uses data to make decisions and predictions.</li>
+                                <li>That data might contain conscious or unconscious bias.</li>
+                                <li>For instance, AI systems can use data that is inherently flawed, which then causes bias and/or discrimination.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12">
+                            5. AI can destroy jobs.
+                        </button>
+                    </h2>
+                    <div id="collapse12" class="accordion-collapse collapse" data-bs-parent="#consAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>It's impossible to predict with a high degree of accuracy how many jobs AI will take. </li>
+                                <li>AI will create and enhance far more jobs than it eliminates.</li>
+                                <li> The danger is always present that AI will get good enough at enough tasks to cause widespread job loss and long-term unemployment.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse13">
+                            6. AI doesn't always deliver on its promise.
+                        </button>
+                    </h2>
+                    <div id="collapse13" class="accordion-collapse collapse" data-bs-parent="#consAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>The world of artificial intelligence is filled with hype, buzz, and larger-than-life claims.</li>
+                                <li>AI excels at performing narrow tasks extremely well, on its own, at scale.</li>
+                                <li>In reality, AI can do many narrow tasks much better than humans, but it's still math, not magic.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse14">
+                            7. AI can be expensive.
+                        </button>
+                    </h2>
+                    <div id="collapse14" class="accordion-collapse collapse" data-bs-parent="#consAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li> You rarely have to purchase AI tools on your own. </li>
+                                <li>Some types of AI can be prohibitively expensive.</li>
+                                <li>Make no mistake, there are AI tools that are affordable for every business.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="image/Advantages_and_Disadvantages_of_artificial_intelligence.jpg" class="card-img-top" alt="AI Benefits" height="310px">
+                    <div class="card-body">
+                        <h5 class="card-title">AI Benefits</h5>
+                        <p class="card-text">Artificial Intelligence (AI) offers numerous benefits across various industries, improving efficiency, accuracy, and decision-making. In healthcare, AI helps diagnose diseases faster and more accurately, enabling early treatment and saving lives. In business, AI automates repetitive tasks, enhances customer service through chatbots, and provides data-driven insights for better decision-making. Education benefits from AI-powered tutoring systems that personalize learning for students. Additionally, AI improves cybersecurity by detecting threats in real-time and enhances transportation with self-driving cars. By reducing human effort in tedious tasks and enabling smarter solutions, AI continues to revolutionize the way we live and work.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="image/challenges-of-adopting-ai-in-education.jpg" class="card-img-top" alt="AI Challenges" height="310px">
+                    <div class="card-body">
+                        <h5 class="card-title">AI Challenges</h5>
+                        <p class="card-text">Despite its many benefits, AI also presents several challenges that need to be addressed. One major concern is bias in AI algorithms, which can lead to unfair outcomes, especially in hiring, lending, and law enforcement. Additionally, AI-driven automation may replace jobs, leading to unemployment and economic disruption. Privacy is another issue, as AI systems often rely on vast amounts of personal data, raising concerns about misuse and security breaches. Ethical dilemmas, such as AI decision-making in life-and-death situations, also pose significant challenges. Furthermore, the rapid advancement of AI raises concerns about regulation, accountability, and its potential misuse in cyber warfare or misinformation campaigns.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-5">
+        <div class="container-fluid text-center">
+            
+                <div class="row pt-3">
+                    <div class="footer-col col-md-4">
+                        <img src="image/logo.png" alt="img" width="80px" class="rounded-circle ms-5 ">
+                        <p class="text-white pt-3">Contact us:</p>
+                        <p class="text-white">+95 9781111957</p>
+                        <p class="text-white">+95 95114238</p>
+                    </div>
+  
+                    <!--2nd Col-->
+                    <div class="footer-col col-md-4">
+                        <h4>Check Here</h4>
+                        <ul>
+                          <li><a href="index.html">Homepage</a></li>
+                          <li><a href="about us.html">About Us</a></li>
+                          <li><a href="pros.html">Pros and Cons of AI</a></li>
+                          <li><a href="reference.html">References</a></li>
+                      </ul>
+                    </div>
+  
+                    <!--3rd Col-->
+                    <div class="footer-col col-md-4">
+                        <h4>Quick Link</h4>
+                        <ul>
+                          <li><a href="general AI.html">General AI</a></li>
+                          <li><a href="AI and Machine Learning.html">AI and Machine Learning</a></li>
+                          <li><a href="limited memory AI.html">Limited Memory AI</a></li>
+                          <li><a href="Therory of Mind AI.html">Theory of Mind AI</a></li>
+                      </ul>
+                    </div>
+                </div>
+  
+                <hr class="footer-hr"/>
+                <div class="row">
+                    <ul class="social-icons">
+                        <a href="https://www.youtube.com/@Maaaarth/videos" class="fa fa-youtube"></a>
+                        <a href="https://www.coursera.org/articles/what-is-artificial-intelligence" class="fa fa-google"></a>
+                        <a href="https://www.pinterest.com/search/pins/?rs=ac&len=2&q=artificial%20inteligent&eq=Artificial%20inte&etslf=5939" class="fa fa-pinterest"></a>
+                    </ul>
+                    <div class="col" class="symbol">
+                        <p class="text-white">© Copyright 2025 www.SnowFlake.com. All rights reserved. Developed by SnowFlake.</p>
+                    </div>
+                </div>  
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
